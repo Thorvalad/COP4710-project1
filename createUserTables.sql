@@ -26,6 +26,7 @@ CREATE PROCEDURE CreateUserTables ()
 	(
 	username CHAR(50),
 	password CHAR(127),
+	userClass CHAR(15),
 	PRIMARY KEY (username)
 	)
       ENGINE=InnoDB DEFAULT CHARSET=utf8;
