@@ -20,7 +20,7 @@ session_start();
 			}
 			if(isset($_SESSION['user']))
 			{
-				if($_SESSION['userTaken'] == 1) {
+				if($_SESSION['user'] == 1) {
 					echo '<p style="color:red">Username already exists, please pick another username<p>';
 				}
 			}
