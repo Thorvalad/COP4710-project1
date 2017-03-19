@@ -30,26 +30,26 @@ CREATE PROCEDURE CreateUserTables ()
 	PRIMARY KEY (username)
 	);
 	
+	CREATE TABLE location
+	(
+	name VARCHAR(50),
+	latitude VARCHAR(100),
+	longitude VARCHAR(100)
+	);
+	
 	CREATE TABLE project.Events
 	(
 	event_id INT NOT NULL AUTO_INCREMENT,
-	id INTEGER,
 	title VARCHAR(255),
-	subtitle VARCHAR(255),
 	description VARCHAR(500),
 	location VARCHAR(100),
-	location_url VARCHAR(255),
-	starts VARCHAR(50),
-	ends VARCHAR(50),
-	ongoing BOOLEAN,
+	time datetime,
 	category VARCHAR(50),
-	tags VARCHAR(255),
-	contact_name VARCHAR(75),
 	contact_phone VARCHAR(12),
 	contact_email VARCHAR(100),
-	url VARCHAR(255),
 	view VARCHAR(20),
-	PRIMARY KEY(event_id)
+	PRIMARY KEY(event_id),
+	FOREIGN KEY (location) references project.location (name)
 	);
 	
 	CREATE TABLE EventAdmin
