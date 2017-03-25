@@ -34,7 +34,8 @@ CREATE PROCEDURE CreateUserTables ()
 	(
 	name VARCHAR(50),
 	latitude VARCHAR(100),
-	longitude VARCHAR(100)
+	longitude VARCHAR(100),
+	PRIMARY KEY(name)
 	);
 	
 	CREATE TABLE project.Events
